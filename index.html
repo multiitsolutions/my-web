@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Portfolio</title>
+  <title>Responsive Navbar</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: #0f0f0f; color: #eee; scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background-color: #0f0f0f; color: #eee; scroll-behavior: smooth; }
 
     header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      background: #121212; display: flex; justify-content: space-between; align-items: center;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: #121212; display: flex; align-items: center; justify-content: space-between;
       padding: 1rem 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     }
     header h1 { color: #facc15; font-size: 1.2rem; }
 
-    nav { display: flex; gap: 1.2rem; }
-    nav a { color: #eee; text-decoration: none; font-weight: 500; }
+    nav {
+      display: flex; gap: 1.2rem;
+    }
+    nav a {
+      color: #eee; text-decoration: none; font-weight: 500;
+      transition: color 0.3s;
+    }
     nav a:hover { color: #facc15; }
 
+    /* HAMBURGER ICON */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -28,24 +34,28 @@
     }
     .menu-toggle span {
       width: 25px; height: 3px; background: #eee; border-radius: 3px;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
+    /* NAV MOBILE */
     @media (max-width: 768px) {
       nav {
-        position: absolute; top: 100%; left: 0; right: 0; background: #121212;
-        flex-direction: column; gap: 0; display: none;
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; background: #1a1a1a; gap: 0;
+        overflow: hidden; max-height: 0;
+        transition: max-height 0.3s ease;
+      }
+      nav.active {
+        max-height: 300px;
       }
       nav a {
         padding: 1rem 1.5rem; border-top: 1px solid #222;
       }
-      nav.active { display: flex; }
-
       .menu-toggle { display: flex; }
     }
 
     section {
-      padding: 6rem 2rem 3rem;
+      padding: 6rem 1.5rem 3rem;
       max-width: 1000px; margin: 0 auto;
     }
     h2 {
@@ -54,7 +64,7 @@
     }
     footer {
       text-align: center; padding: 1rem; background-color: #121212;
-      color: #888; font-size: 0.9rem; margin-top: 2rem;
+      color: #aaa; font-size: 0.9rem; margin-top: 2rem;
     }
   </style>
 </head>
@@ -74,34 +84,13 @@
   </nav>
 </header>
 
-<section id="home">
-  <h2>Home</h2>
-  <p>Welcome to my portfolio.</p>
-</section>
+<section id="home"><h2>Home</h2><p>Welcome to my portfolio.</p></section>
+<section id="services"><h2>Services</h2><p>Professional services I offer.</p></section>
+<section id="projects"><h2>Projects</h2><p>Check out my work.</p></section>
+<section id="about"><h2>About</h2><p>Who I am.</p></section>
+<section id="contact"><h2>Contact</h2><p>Contact me here.</p></section>
 
-<section id="services">
-  <h2>Services</h2>
-  <p>Here are the services I offer.</p>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <p>My featured projects.</p>
-</section>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>Information about me.</p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Contact me at <a href="mailto:your@email.com" style="color:#facc15;">your@email.com</a></p>
-</section>
-
-<footer>
-  &copy; 2025 My Portfolio | Crafted with care
-</footer>
+<footer>&copy; 2025 My Portfolio | All rights reserved</footer>
 
 <script>
   function toggleMenu() {
