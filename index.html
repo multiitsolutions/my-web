@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; color: #eee; background-color: #121212; }
+    header { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100vh; background: linear-gradient(to right, #1e1e1e, #111); padding: 2rem; }
+    header h1 { font-size: 3rem; color: #facc15; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; color: #ccc; margin-bottom: 2rem; }
+    header a { padding: 0.7rem 1.5rem; background-color: #facc15; color: #121212; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    section { max-width: 1000px; margin: 4rem auto; padding: 2rem; }
+    h2 { color: #facc15; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid #facc15; display: inline-block; }
+    .service, .project { margin-bottom: 2rem; }
+    .service h3, .project h3 { color: #facc15; margin-bottom: 0.5rem; }
+    .service p, .project p { color: #ccc; }
+    .project img { width: 100%; max-width: 600px; border-radius: 8px; margin: 0.5rem 0; border: 1px solid #333; }
+    footer { background-color: #1e1e1e; color: #aaa; text-align: center; padding: 1rem; font-size: 0.9rem; margin-top: 3rem; border-top: 1px solid #333; }
+    nav { position: fixed; top: 0; width: 100%; background-color: rgba(18, 18, 18, 0.9); padding: 0.5rem 1rem; display: flex; justify-content: center; gap: 1.5rem; z-index: 100; }
+    nav a { color: #eee; text-decoration: none; font-weight: 500; }
+    nav a:hover { color: #facc15; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Helping businesses grow with modern technology solutions.</p>
+    <a href="#contact">Get in Touch</a>
+  </header>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="service">
+      <h3>💻 Web Development</h3>
+      <p>Design and development of modern websites for businesses, portfolios, and online stores.</p>
+    </div>
+    <div class="service">
+      <h3>📱 Mobile Apps</h3>
+      <p>Cross-platform mobile applications built with React Native or hybrid technologies.</p>
+    </div>
+    <div class="service">
+      <h3>⚙️ Automation & Optimization</h3>
+      <p>Process automation and system optimization to improve efficiency in business operations.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>🌐 Online Store Website</h3>
+      <p>Developed with React & Next.js, including admin panel and payment integration.</p>
+      <img src="https://via.placeholder.com/600x338.png?text=Online+Store+Project" alt="Online Store Screenshot">
+    </div>
+    <div class="project">
+      <h3>📱 Reservation App</h3>
+      <p>Mobile app for restaurants to manage reservations, developed with React Native.</p>
+      <img src="https://via.placeholder.com/600x338.png?text=Reservation+App+Project" alt="Reservation App Screenshot">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com" style="color: #facc15; text-decoration: none;">your.email@example.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/1234567890" style="color: #facc15; text-decoration: none;">+1 (234) 567-8901</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name | Portfolio. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>
